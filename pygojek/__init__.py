@@ -1,2 +1,5 @@
-from .account import getCustomerInfo
-from .config import setToken, getToken, setLocation, getAppVersion, getLocation
+from .account import *
+
+from .config import (
+    set_token, get_token, set_location, get_app_version, get_location
+)

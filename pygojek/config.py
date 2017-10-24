@@ -1,25 +1,28 @@
 token = ''
 location = '-6.175386, 106.827122'
-uniqueId = '9774d56d682e549c'
-appVersion = '2.28.2'
-clientSecret = '83415d06-ec4e-11e6-a41b-6c40088ab51e'
+unique_id = '9774d56d682e549c'
+app_version = '2.28.2'
+client_secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e'
 
-def setToken(t):
+def set_token(t):
     global token
     token = t
 
-def getToken():
+def get_token():
     return token
 
-def setLocation(l):
+def set_location(l):
     global location
     location = l
 
-def getLocation():
+def get_location():
     return location
 
-def getAppVersion():
-    return appVersion
+def get_app_version():
+    return app_version
 
-def getUniqueId():
-    return uniqueId
+def get_uniqueid():
+    return unique_id
+
+def get_client_secret():
+    return client_secret
