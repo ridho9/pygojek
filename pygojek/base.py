@@ -4,7 +4,7 @@ import requests
 API_URL = 'https://api.gojekapi.com/'
 
 
-def request(options, url):
+def request(options: dict, url):
     get_url = API_URL + url
     headers = {
         'content-type': 'application/json',
@@ -14,8 +14,10 @@ def request(options, url):
         'authorization': 'Bearer ' + config.get_token()
     }
 
+    headers.update(options.get('headers', {}))
+
     if options['method'] == 'GET':
-        r = requests.get(get_url, headers=headers)
+        r = requests.get(get_url, headers=headers, params=options.get('params', ''))
     elif options['method'] == 'POST':
         r = requests.post(get_url, headers=headers, json=options['body'])
     elif options['method'] == 'DELETE':
